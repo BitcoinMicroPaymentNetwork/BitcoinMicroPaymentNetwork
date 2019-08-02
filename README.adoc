@@ -1,3 +1,166 @@
+# BitcoinMicroPaymentNetwork
+                                                                   
+                                           Bitcoin Micro Payment Network (BMPN)
+
+BMPN is decentralized, stateless and layer 2 blockchain network for micro payment of Bitcoin with instant confirmation time and having a low transaction fee.
+
+BMPN network is based on the principle of the decentralized vault and liquidity flow (with no central authority) and controlled by machine and code, the owner of the vault has no control over the vaults deposits or its operations. 
+ 
+BMPN network is secured by running in a sandboxed environment provided by Intel SGX and on top of that secured by Plasma / State Channel (not decided yet, will go for a simpler approach and more secure and proven solution) on Ethereum and has sub-second block confirmation time. 
+
+“State Channel-based payment micropayment network for Bitcoin, like Lightning Network, has liquidity problem and it tends to create a hub of centralized nodes to provide liquidity which can be more powerful over time and dictate the rules and governance of the network. There are many other problems like unsolved routing as stated in subsequent sections, they are trying to mitigate this unsolved routing problem using centralized hubs with high liquidity like big banks which violates the principle of decentralized economy”
+
+In BMPN user deposits the bitcoin to vault nodes and an equivalent amount of token on BMPN chain is credited to the User wallet whose value is 1 token = 1 Bitcoin. 
+
+These vault nodes are not the bank as they have no control over the fund, nor they have the private key of the fund. Think it like an Ethereum smart contract which has money, it can distribute money only as per rules are written in a smart contract. Vault money is distributed as per network rules are written in BMPN runtime which is a smart contract. 
+
+No human being owns the Vault, it’s the network which owns it and runtime (smart contract) drives it. 
+
+This token is very fast (sub-second) to transact for payment purpose backed by bitcoin deposits on vault. The fee is near zero (only gas fee of BMPN network).
+
+The deposits of users are insured by the stake of vault nodes in BMPN coin by Nodes owners.
+
+It uses a set of deterministic payment rules between users and providers of services (vault node). Upon violation, the Vault Node is penalized by removing its 100 % stake and deposited to the fund controlled by DAO for the management of the Network. It’s the DAO duty to manually sale the stacked coins on the exchange and deposits the equivalent amount of lost bitcoin in the network. The DAO fund will not receive credit, however, it will receive the rest staked coins as a reward. The DAO is governed by voting and smart contract.
+
+BMPN will never use any DEX exchange or any third-party oracle service for automated sales execution as BMPN runs under a sealed sandbox environment and do not want to provide any attack surface to a hacker, that’s why its philosophy is to remain stateless and sandboxed from external data or service. 
+
+
+Vault nodes are also the miners of Network using POS protocol. 
+
+BMPN Runtime does not define any limit on deposits and deposits are distributed equally in a round-robin fashion to vaults and its possible if vault node administrator sees any incentive to hack into its node if the value of deposits is far greater than the value of staked coins. However, it is near impossible to hack in the SGX enclave sandboxed code written by BMPN, still, the deposit will be protected by game theory to make sure that there is no incentive to hack. 
+
+Max deposits per node are hardcoded and reviewed every month and updated by the soft release by DAO which works through voting. Initially, it might be having a limit of 50 bitcoin per node/vault. 
+
+Whole intention is to keep network node deposits lesser than staked coins which will demotivate any hacker.
+
+The network also provides an API that gives details of how many average bitcoins is deposited per node which explains the risk of a network. 
+
+All Vault Nodes code is mandated to run on Intel Sgx Enclave otherwise they will not be able to join the network in the first place. 
+The private key of the Vault wallet is secured by Intel SGX secure Enclave technology.  Even the administrator of the Vault node doesn’t have access to the private key of the wallet. No human being controls vault Nodes.
+
+The BMPN network runtime code (smart contract) runs in Encrypted memory (Intel Enclave) performs all deposits and payment which vault node can’t access. Even the POS protocol run in the Intel Enclave (secured memory).
+
+It’s almost impossible to steal the private key from the encrypted memory. There are various methods to steal it like Spectre attack but it’s not possible to do it on BMPN as we have implemented memory fencing code and proper enclave remote attestation to protect from a malicious hacker. 
+
+Considering a hypothetical situation, if a vault node administrator somehow gets the key by hacking, he has no incentive in transferring the fund to himself as Network knows which vault own which address (as it is announced by vault node by using a combination of stake coin address with vault bitcoin address and mined in blockchain) and each network node also runs bitcoin node and they watch any malicious payment attempt on bitcoin network. The moment they detect it they will broadcast a fraud transaction against the given Vault node and it will be mined, verified and its stake will be taken away. 
+Vault also needs to meet SLA (service level agreement), Upon failing it its stake can be slashed as per agreement. They need not be offline more than 12 hours at a stretch, otherwise, they will start losing stake (10 % every 12 hours). They have to refill a stake to rejoin the network. They can exercise the option to eject from network anytime, in that case, SLA will not apply and staked coin balance will be released to its wallet address.
+
+DAO maintains the treasury and will add an equivalent number of bitcoins to the network if it sees that deposits are blocked or hacked and can affect withdrawals. 
+
+ALL slashed staked coins are deposited to DAO treasury fund also DAO receives 10% of network mined coins and transaction fees.   
+
+“BMPN instead transfers the control of the fund to the Machine and Code “
+
+User can withdraw bitcoin anytime any amount they like from BMPN Network. It’s not necessary that they have to withdraw the full amount. Accordingly, the bitcoin token balance on the BMPN network will be reduced.  
+
+User has wallet which contains user identifier (mobile number) which will be used as address for making payment, BMPN Bitcoin token address which holds credited bitcoin token (1 bitcoin token on BMPN = 1 Bitcoin), Bitcoin withdrawal address (user can define address or ask wallet to create it and store it in the wallet) , bitcoin deposit address (This will be provided by wallet during deposit time, this will be provided by Network upon request by wallet) and BMPN address to store and transaction BMPN coins. 
+
+User will pay a gas fee for all bitcoin token transaction on BMPN network which is very less, (almost negligible). The gas fee will be deducted from its bitcoin token and not BMPN holdings. 
+
+However, settlement to Miners will happen in BMPN token only. The gas fee will be swapped on the DEX exchange. This will ensure the value of the BMPN token. 
+
+Those who transact BMPN coins on the network will pay a gas fee in BMPN coins. 
+
+BMPN Bitcoin token address of user and merchant is kept secret and people pay using user identifier (mobile number), the address is resolved by the network by looking up the user and address mapping database, the address part is encrypted and decrypted by network key which is separate from the vault payment network key. 
+This key is generated during the genesis of the network in one of the nodes and then transferred to all the trusted nodes by using Intel sgx remote attestation and TLS security. Each trusted node will have a copy of this key and they will keep it as sealed (using intel processor key) on the blockchain database itself. 
+Any new node can request this key from the other node. The node will decrypt using its private key provided by the Intel SGX processor and then send it to a new node if this is a trusted node (which runs on Intel SGX enclave) after the remote attestation of each other.
+
+BMPN only use user identifier instead of address so that no one will know user fund, for example, a merchant does not want to disclose how much business he does per day to the public. 
+
+
+Vault node keeps its deposit/payment address key by using the Shamir secret key (learn it here https://www.youtube.com/watch?v=5XLUZLqSa8I) algorithm. It creates a key in protected memory and divides the secret into two parts. First part is unencrypted and kept in the local disk of the vault node (The local disk must be encrypted using bit locker). The second part is distributed among other peer nodes using a Shamir secret sharing algorithm with a threshold of 51%. Other nodes can’t create the key as they together have only 50% of the information. It’s only the original vault node which can create the full key if other node supply secret with threshold 51 %. However, they will only supply the secret if the original vault attests to himself that he is running the right software in intel Enclave. 
+
+The threshold is kept at 51% and Network monitors its nodes count, if the node count goes down or up it reapplies replication of secret shared keys across nodes to maintain a 51% threshold. 
+This process runs every day to protect the network payment function to be affected by a DDOS attack. 
+
+
+This is done basically to make sure that only Vault administrator can create full private in an enclave and if he somehow hacks, his stake will be taken off. 
+
+We are not using the Intel enclave sealing in the responsible vault node as the vault money will be lost forever if the processor burns by overheating or any other manufacturing defects. However other vault nodes will seal the Shamir secrets sent to them by the responsible vault node. There is enough redundancy even 49% nodes go offline as a threshold is 51 %.
+
+
+= DAO Insurance Fund
+
+DAO receives 10% of mining profits and it allocates its budget for a various task like maintenance of network and development, DAO elects by voting trusted party who has the power to manage this fund. One of these funds is Insurance fund which is kept in Bitcoin to cover any loss of digital money from the network. 
+All DAO funds are kept in a multi-sig cold wallet and controlled by a trusted party elected by voting. 
+
+= Network Payment Workflow
+
+Randomly one vault node having deposits will be selected to process requested withdrawal by the runtime, the node will request the shared keys from a network, it will only be provided if the node is running legit software in TEE (Trusted Execution Environment). Then it will transfer fund from treasury to the withdrawer. Only one transaction is required. And user BMPN account balance of Bitcoin token is reduced by the amount he withdraws.
+ 
+
+= Technology
+ 
+Rust SDK for SGX by Baidu https://github.com/baidu/rust-sgx-sdk
+                       
+Mesalock linux - https://github.com/mesalock-linux
+                        
+Blockchain developed on Substrate by Parity
+                        
+Future integration to Polkadot for enhanced security.
+
+= Security  
+
+Perform checks on remote attestation reports more strictly
+                   
+Apply memory lock using sgx_lfense to counter hacks like Spectre. 
+                    
+Secure against all types of attack against Intel SGX processor by using Baidu RUST SGX SDK and Mesalock Linux. 
+                    
+Formal verification for payment runtime developed on a substrate.
+                    
+Enclave measurement hash to conclude the original trusted code is used by nodes. A small part of sensitive code (run time for a smart contract) will be measured by each node before trusting another node. 
+
+
+                   
+= Risk
+
+If the vault processor burns or he loses the local disk, he might start losing his stake if he was not able to meet SLA after 10 hours. Vault node administrator must maintain a backup copy of a key store so that he can import it using the client software to recover when the disk is lost. And if the processor burns then he must replace it asap. 
+Always keep your disk encrypted using BitLocker or other tools. 
+
+Network Fork, In case of a hard fork, those nodes who will not join the original network will lose their stake as SLA will be broken after some time in the original network. This stake will be transferred to the DAO fund. 
+
+
+= Problem with Lightning Network
+1)    If two-party deposit funds in a multi-sig wallet and one party forgets its key, the other party can’t withdraw funds.
+2)    Liquidity problem, one party cannot send funds to another third party of there is not enough liquidity. 
+3)    The more nodes it passes through the more fees on lightening network 
+4)    Somebody must be online to receive money
+5)    Routing is still unsolved. Source-based routing, which was used in early internet days, not hop by hop. Routing is tough as network path changes due to Liquidity changes dynamically between nodes or channels may be closed. The existing path discovery mechanism assumes that the map is known which is not the case here, the bigger problem is not the path discovery it is the map discovery. 
+6)    Not Production Ready
+7)    Inherent Complexity like Watch Towers
+8)    High Tx failure rate
+9)    Centralized high liquidity providers can control entire network rules (network fees to provide routing and liquidity). It’s like a big bank and if they collapse your money is stuck forever in a multi-sig wallet.
+
+This problem is explained here https://www.youtube.com/watch?v=AzaEd2RQuRw
+
+                    
+
+
+
+= ROADMAP 
+
+1)    Build a POC with basic Testnet on Azure cloud having around 10 nodes. It must have basic BMPN protocol implemented in runtime.
+2)    Test the transaction through Web UI provided by Substrate.
+3)    Test the transaction through the command line interface by running one of the nodes in your laptop which supports intel sgx enclave. The node must connect with the test network on Azure.
+4)    Develop the Android or IOS wallet 
+5)    Develop light client (thick client) and enhance existing Web UI for Desktop (Pc /Mac OS). This light client need not have intel sgx, they will only download the blockchain and verify its integrity and do the transaction. WEB UI will interact with the local node and run at the localhost. 
+6)    Enhance the substrate block explorer to showcase, the total number of bitcoins present in-network and by nodes. The number of withdrawals and deposits made last 24 hours, the latest withdrawal and deposits progress info. All short of real-time information required by end-user and analytics. 
+7)    Future integration to Polkadot for enhanced security.
+
+= Reward for Developers
+
+BMPN token is created on Ethereum blockchain with a total amount of 1 billion in the genesis block, later this will be swapped for network coin. This will be distributed to the contributors of the project. 5% of the total token will be held by Team Satoshi (nicknamed to honor Satoshi Nakamoto).  45 % token will be distributed among open source developers during the lifetime of the project by Team Satoshi. Rest 50% will be deposited to the DAO fund and to be distributed to contributors through a voting mechanism. Staking subsidies in BMPN will be available for only 5 years, in the future its the transaction fee in Bitcoin which will be earned by stakers / miners. All the terms and conditions related to reward (45 %) and deposits to DAO can change subject to voting and consensus by the community.  
+
+Contact Developer group on telegram - @bmpnofficial 
+
+
+
+
+= Substrate Documentation Below -
+
+
+
 = Substrate
 :Author: Substrate developers
 :Revision: 0.2.0
