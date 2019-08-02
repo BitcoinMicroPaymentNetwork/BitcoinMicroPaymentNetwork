@@ -79,17 +79,17 @@ This is done basically to make sure that only Vault administrator can create ful
 We are not using the Intel enclave sealing in the responsible vault node as the vault money will be lost forever if the processor burns by overheating or any other manufacturing defects. However other vault nodes will seal the Shamir secrets sent to them by the responsible vault node. There is enough redundancy even 49% nodes go offline as a threshold is 51 %.
 
 
-= DAO Insurance Fund
+== DAO Insurance Fund
 
 DAO receives 10% of mining profits and it allocates its budget for a various task like maintenance of network and development, DAO elects by voting trusted party who has the power to manage this fund. One of these funds is Insurance fund which is kept in Bitcoin to cover any loss of digital money from the network. 
 All DAO funds are kept in a multi-sig cold wallet and controlled by a trusted party elected by voting. 
 
-= Network Payment Workflow
+== Network Payment Workflow
 
 Randomly one vault node having deposits will be selected to process requested withdrawal by the runtime, the node will request the shared keys from a network, it will only be provided if the node is running legit software in TEE (Trusted Execution Environment). Then it will transfer fund from treasury to the withdrawer. Only one transaction is required. And user BMPN account balance of Bitcoin token is reduced by the amount he withdraws.
  
 
-= Technology
+== Technology
  
 Rust SDK for SGX by Baidu https://github.com/baidu/rust-sgx-sdk
                        
@@ -99,7 +99,7 @@ Blockchain developed on Substrate by Parity
                         
 Future integration to Polkadot for enhanced security.
 
-= Security  
+== Security  
 
 Perform checks on remote attestation reports more strictly
                    
@@ -113,7 +113,7 @@ Enclave measurement hash to conclude the original trusted code is used by nodes.
 
 
                    
-= Risk
+== Risk
 
 If the vault processor burns or he loses the local disk, he might start losing his stake if he was not able to meet SLA after 10 hours. Vault node administrator must maintain a backup copy of a key store so that he can import it using the client software to recover when the disk is lost. And if the processor burns then he must replace it asap. 
 Always keep your disk encrypted using BitLocker or other tools. 
@@ -121,7 +121,7 @@ Always keep your disk encrypted using BitLocker or other tools.
 Network Fork, In case of a hard fork, those nodes who will not join the original network will lose their stake as SLA will be broken after some time in the original network. This stake will be transferred to the DAO fund. 
 
 
-= Problem with Lightning Network
+== Problem with Lightning Network
 1)    If two-party deposit funds in a multi-sig wallet and one party forgets its key, the other party can’t withdraw funds.
 2)    Liquidity problem, one party cannot send funds to another third party of there is not enough liquidity. 
 3)    The more nodes it passes through the more fees on lightening network 
@@ -138,7 +138,7 @@ This problem is explained here https://www.youtube.com/watch?v=AzaEd2RQuRw
 
 
 
-= ROADMAP 
+== ROADMAP 
 
 1)    Build a POC with basic Testnet on Azure cloud having around 10 nodes. It must have basic BMPN protocol implemented in runtime.
 2)    Test the transaction through Web UI provided by Substrate.
@@ -148,7 +148,7 @@ This problem is explained here https://www.youtube.com/watch?v=AzaEd2RQuRw
 6)    Enhance the substrate block explorer to showcase, the total number of bitcoins present in-network and by nodes. The number of withdrawals and deposits made last 24 hours, the latest withdrawal and deposits progress info. All short of real-time information required by end-user and analytics. 
 7)    Future integration to Polkadot for enhanced security.
 
-= Reward for Developers
+== Reward for Developers
 
 BMPN token is created on Ethereum blockchain with a total amount of 1 billion in the genesis block, later this will be swapped for network coin. This will be distributed to the contributors of the project. 5% of the total token will be held by Team Satoshi (nicknamed to honor Satoshi Nakamoto).  45 % token will be distributed among open source developers during the lifetime of the project by Team Satoshi. Rest 50% will be deposited to the DAO fund and to be distributed to contributors through a voting mechanism. Staking subsidies in BMPN will be available for only 5 years, in the future its the transaction fee in Bitcoin which will be earned by stakers / miners. All the terms and conditions related to reward (45 %) and deposits to DAO can change subject to voting and consensus by the community.  
 
@@ -157,11 +157,11 @@ Contact Developer group on telegram - @bmpnofficial
 
 
 
-= Substrate Documentation Below -
+= This is fork from Substrate whose Documentation is copied Below -
 
 
 
-= Substrate
+== Substrate
 :Author: Substrate developers
 :Revision: 0.2.0
 :toc:
