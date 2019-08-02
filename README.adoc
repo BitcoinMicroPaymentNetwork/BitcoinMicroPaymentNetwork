@@ -152,4 +152,4 @@ This problem is explained here https://www.youtube.com/watch?v=AzaEd2RQuRw
 
 BMPN token is created on Ethereum blockchain with a total amount of 1 billion in the genesis block, later this will be swapped for network coin. This will be distributed to the contributors of the project. 5% of the total token will be held by Team Satoshi (nicknamed to honor Satoshi Nakamoto).  45 % token will be distributed among open source developers during the lifetime of the project by Team Satoshi. Rest 50% will be deposited to the DAO fund and to be distributed to contributors through a voting mechanism. Staking subsidies in BMPN will be available for only 5 years, in the future its the transaction fee in Bitcoin which will be earned by stakers / miners. All the terms and conditions related to reward (45 %) and deposits to DAO can change subject to voting and consensus by the community.  
 
-Contact Developer group on telegram - @bmpnofficial 
+== Contact Developer group on telegram - @bmpnofficial 
