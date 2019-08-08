@@ -48,7 +48,7 @@ BMPN network is secured by running in a sandboxed environment provided by Intel 
 
 In BMPN user deposits the bitcoin to vault nodes and an equivalent amount of token on BMPN chain is credited to the User wallet whose value is 1 token = 1 Bitcoin. 
 
-These vault nodes are not the bank as they have no control over the fund, nor they have the private key of the fund. Think it like an Ethereum smart contract which has money, it can distribute money only as per rules are written in a smart contract. Vault money is distributed as per network rules are written in BMPN runtime which is a smart contract. 
+These vault nodes  owners do not operate as bank as they have no control over the fund, nor they have the private key of the fund. Think it like an Ethereum smart contract which has money, it can distribute money only as per rules are written in a smart contract. Vault money is distributed as per network rules are written in BMPN runtime which is a smart contract. 
 
 No human being owns the Vault, it’s the network which owns it and runtime (smart contract) drives it. 
 
