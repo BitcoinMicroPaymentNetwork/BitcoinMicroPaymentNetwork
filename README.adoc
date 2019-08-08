@@ -42,7 +42,7 @@ BMPN is decentralized, stateless and layer 2 blockchain network for micro paymen
 
 BMPN network is based on the principle of the decentralized vault and liquidity flow (with no central authority) and controlled by machine and code, the owner of the vault has no control over the vaults deposits or its operations. 
  
-BMPN network is secured by running in a sandboxed environment provided by Intel SGX and on top of that secured by Plasma / State Channel (not decided yet, will go for a simpler approach and more secure and proven solution) on Ethereum and has sub-second block confirmation time. 
+BMPN network is secured by running in a sandboxed environment provided by Intel SGX and on top of that secured by Plasma / State Channel / polkadot (not decided yet, will go for a simpler approach and more secure and proven solution) on Ethereum / Polkadot and has sub-second block confirmation time. 
 
 “State Channel-based payment micropayment network for Bitcoin, like Lightning Network, has liquidity problem and it tends to create a hub of centralized nodes to provide liquidity which can be more powerful over time and dictate the rules and governance of the network. There are many other problems like unsolved routing as stated in subsequent sections, they are trying to mitigate this unsolved routing problem using centralized hubs with high liquidity like big banks which violates the principle of decentralized economy”
 
