@@ -1,8 +1,10 @@
 Note - The above source code is fork of Substrate . Right now not a single line of code is written to implement the below BMPN network described. Developer community will write the runtime on substate to implement BMPN. Refer the substrate readme file on how to build this project at https://github.com/paritytech/substrate/blob/master/README.adoc
 
-                                                                   
 == Bitcoin Micro Payment Network (BMPN)
 
+== Introduction 
+We have waited enough for lightening network to solve problem of Bitcoin micropayment. Now its the time for BMPN, give it a try and you will like the idea behind it. This uses layer two blockchain which runs on top intel secure memory technology to keep bitcoin in secure vaults in decentralized nodes and process them in a batch to reduce the cost of transaction.  
+                                                                   
 BMPN is decentralized, stateless and layer 2 blockchain network for micro payment of Bitcoin with instant confirmation time and having a low transaction fee.
 
 BMPN network is based on the principle of the decentralized vault and liquidity flow (with no central authority) and controlled by machine and code, the owner of the vault has no control over the vaults deposits or its operations. 
@@ -39,7 +41,7 @@ The network also provides an API that gives details of how many average bitcoins
 All Vault Nodes code is mandated to run on Intel Sgx Enclave otherwise they will not be able to join the network in the first place. 
 The private key of the Vault wallet is secured by Intel SGX secure Enclave technology.  Even the administrator of the Vault node doesn’t have access to the private key of the wallet. No human being controls vault Nodes.
 
-The BMPN network runtime code (smart contract) runs in Encrypted memory (Intel Enclave) performs all deposits and payment which vault node can’t access. Even the POS protocol run in the Intel Enclave (secured memory).
+The BMPN network runtime code (smart contract) runs in Encrypted memory (Intel Enclave) performs all deposits and payment which vault node owner can’t access. Even the POS protocol run in the Intel Enclave (secured memory).
 
 It’s almost impossible to steal the private key from the encrypted memory. There are various methods to steal it like Spectre attack but it’s not possible to do it on BMPN as we have implemented memory fencing code and proper enclave remote attestation to protect from a malicious hacker. 
 
