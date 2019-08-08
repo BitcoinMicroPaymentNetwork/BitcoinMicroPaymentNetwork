@@ -1,18 +1,18 @@
-Note - The above source code is fork of Substrate . Right now not a single line of code is written to implement the below BMPN network described. Developer community will write the runtime on substate to implement BMPN. Refer the substrate readme file on how to build this project at https://github.com/paritytech/substrate/blob/master/README.adoc
+Note - The above source code is fork of Substrate . Right now not a single line of code is written to implement the below BMPN network described. Developer community will write the run time on substrate to implement BMPN. Refer the substrate readme file on how to build this project at https://github.com/paritytech/substrate/blob/master/README.adoc
 
 == Bitcoin Micro Payment Network (BMPN)
 
 == Introduction 
 We have waited long for lightening network to solve problem of Bitcoin micropayment. Now its the time for BMPN, give it a try and you will like the idea behind it. Decentralization is at the core of BMPN network technology. 
 
-Let us take an example , There are three people involved in payment network (Alice , Bob and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob . The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
+Let us take an example , There are three people involved in payment network (Alice , BOB and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob . The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
 Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like BitPay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin. 
 
 She also do not want to migrate to other crypto currency for faster payment with lower fee as holding bitcoin has better return in USD than other crypto . She want to invest and spend wisely and so she want to be in Bitcoin. 
 
 She decided to try BMPN network , she deposited 1 bitcoin to BMPN wallet. She had to pay the network fee of bitcoin at very first time. But she wanted to know is it worth ? . She paid 0.5$ worth of bitcoin as network fee to Bitcoin network to transfer 10000$ worth of bitcoin on BMPN network (considering 1 bitcoin = 10000 $). 
 
-Now She does the transfer again  5$ worth of Bitcoin on BMPN network to BoB and she found that network charge is as low as 1 cent per transaction. 
+Now She does the transfer again  5$ worth of Bitcoin on BMPN network to Bob and she found that network charge is as low as 1 cent per transaction. 
 
 She later did lot of shopping with many vendors and she was surprise that all those transaction were charged with one cent only and transaction was instant (within second).
 
@@ -36,6 +36,11 @@ When a vendor or any one withdraws the bitcoin , they withdraw from these vaults
 
 Also No one can steal the bitcoin deposits present in vaults as the bitcoin vault address private key is secured by intel sgx based procesor which has its own private key which no one knows, not even owner of nodes nor intel company , This is private to processor. Also the transaction of BMPN token on BMPN network happens very fast as confirmation time is 1 second only.
 
+In BMPN Network we have three types of coins/token 
+1) BMPN coin for staking on nodes and protect network 
+2) Bitcoin token similar to ERC 20 token which is equivalent to 1 Bitcoin and backed by Bitcoin. 
+3) Actual Bitcoin stored in vaults.
+
 == Technical details  
                                                                    
 BMPN is decentralized, stateless and layer 2 blockchain network for micro payment of Bitcoin with instant confirmation time and having a low transaction fee.
@@ -46,13 +51,13 @@ BMPN network is secured by running in a sandboxed environment provided by Intel 
 
 “State Channel-based payment micropayment network for Bitcoin, like Lightning Network, has liquidity problem and it tends to create a hub of centralized nodes to provide liquidity which can be more powerful over time and dictate the rules and governance of the network. There are many other problems like unsolved routing as stated in subsequent sections, they are trying to mitigate this unsolved routing problem using centralized hubs with high liquidity like big banks which violates the principle of decentralized economy”
 
-In BMPN user deposits the bitcoin to vault nodes and an equivalent amount of token on BMPN chain is credited to the User wallet whose value is 1 token = 1 Bitcoin. 
+In BMPN user deposits the bitcoin to vault nodes and an equivalent amount of bitcoin token (proxy)  on BMPN chain is credited to the User wallet whose value is 1 token = 1 Bitcoin. 
 
-These vault nodes  owners do not operate as bank as they have no control over the fund, nor they have the private key of the fund. Think it like an Ethereum smart contract which has money, it can distribute money only as per rules are written in a smart contract. Vault money is distributed as per network rules are written in BMPN runtime which is a smart contract. 
+These vault nodes owners do not operate as bank as they have no control over the fund, nor they have the private key of the fund. Think it like an Ethereum smart contract which has money, it can distribute money only as per rules are written in a smart contract. Vault money is distributed as per network rules are written in BMPN runtime which is a smart contract. 
 
 No human being owns the Vault, it’s the network which owns it and runtime (smart contract) drives it. 
 
-This token is very fast (sub-second) to transact for payment purpose backed by bitcoin deposits on vault. The fee is near zero (only gas fee of BMPN network).
+This token is very fast (sub-second) to transact for payment purpose backed by bitcoin deposits on vault. The fee is very low (paid in bitcoin token).
 
 The deposits of users are insured by the stake of vault nodes in BMPN coin by Nodes owners.
 
@@ -65,7 +70,7 @@ Vault nodes are also the miners of Network using POS protocol.
 
 BMPN Runtime does not define any limit on deposits and deposits are distributed equally in a round-robin fashion to vaults and its possible if vault node administrator sees any incentive to hack into its node if the value of deposits is far greater than the value of staked coins. However, it is near impossible to hack in the SGX enclave sandboxed code written by BMPN, still, the deposit will be protected by game theory to make sure that there is no incentive to hack. 
 
-Max deposits per node are hardcoded and reviewed every month and updated by the soft release by DAO which works through voting. Initially, it might be having a limit of 50 bitcoin per node/vault. 
+Max deposits per node are hard coded and reviewed every month and updated by the soft release by DAO which works through voting. Initially, it might be having a limit of 50 bitcoin per node/vault. 
 
 Whole intention is to keep network node deposits lesser than staked coins which will demotivate any hacker.
 
@@ -83,7 +88,7 @@ Vault also needs to meet SLA (service level agreement), Upon failing it its stak
 
 DAO maintains the treasury and will add an equivalent number of bitcoins to the network if it sees that deposits are blocked or hacked and can affect withdrawals. 
 
-ALL slashed staked coins are deposited to DAO treasury fund also DAO receives 10% of network mined coins and transaction fees.   
+ALL slashed staked BMPN coins are deposited to DAO treasury fund also DAO receives 10% of network mined coins and transaction fees in bitcoin token.   
 
 “BMPN instead transfers the control of the fund to the Machine and Code “
 
@@ -91,17 +96,13 @@ User can withdraw bitcoin anytime any amount they like from BMPN Network. It’s
 
 User has wallet which contains user identifier (mobile number) which will be used as address for making payment, BMPN Bitcoin token address which holds credited bitcoin token (1 bitcoin token on BMPN = 1 Bitcoin), Bitcoin withdrawal address (user can define address or ask wallet to create it and store it in the wallet) , bitcoin deposit address (This will be provided by wallet during deposit time, this will be provided by Network upon request by wallet) and BMPN address to store and transaction BMPN coins. 
 
-User will pay a gas fee for all bitcoin token transaction on BMPN network which is very less, (almost negligible). The gas fee will be deducted from its bitcoin token and not BMPN holdings. 
-
-However, settlement to Miners will happen in BMPN token only. The gas fee will be swapped on the DEX exchange. This will ensure the value of the BMPN token. 
-
-Those who transact BMPN coins on the network will pay a gas fee in BMPN coins. 
+User will pay a gas fee in respective token or coin to miners . For bitcoin token they will pay gas fee in bitcoin token , smilarly for BMPN transaction they will pay in BMPN token. 
 
 BMPN Bitcoin token address of user and merchant is kept secret and people pay using user identifier (mobile number), the address is resolved by the network by looking up the user and address mapping database, the address part is encrypted and decrypted by network key which is separate from the vault payment network key. 
 This key is generated during the genesis of the network in one of the nodes and then transferred to all the trusted nodes by using Intel sgx remote attestation and TLS security. Each trusted node will have a copy of this key and they will keep it as sealed (using intel processor key) on the blockchain database itself. 
 Any new node can request this key from the other node. The node will decrypt using its private key provided by the Intel SGX processor and then send it to a new node if this is a trusted node (which runs on Intel SGX enclave) after the remote attestation of each other.
 
-BMPN only use user identifier instead of address so that no one will know user fund, for example, a merchant does not want to disclose how much business he does per day to the public. 
+BMPN only uses user identifier instead of address so that no one will know user fund, for example, a merchant does not want to disclose how much business he does per day to the public. 
 
 
 Vault node keeps its deposit/payment address key by using the Shamir secret key (learn it here https://www.youtube.com/watch?v=5XLUZLqSa8I) algorithm. It creates a key in protected memory and divides the secret into two parts. First part is unencrypted and kept in the local disk of the vault node (The local disk must be encrypted using bit locker). The second part is distributed among other peer nodes using a Shamir secret sharing algorithm with a threshold of 51%. Other nodes can’t create the key as they together have only 50% of the information. It’s only the original vault node which can create the full key if other node supply secret with threshold 51 %. However, they will only supply the secret if the original vault attests to himself that he is running the right software in intel Enclave. 
