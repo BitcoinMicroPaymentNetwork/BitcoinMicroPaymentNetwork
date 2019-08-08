@@ -32,7 +32,7 @@ BMPN network works by giving the depositor a token of bitcoin (BMPN token) which
 When these BMPN token moves from one address to other , there is no movement in actual bitcoin present in vaults so network fee is saved. 
 Bitcoin is kept in vault to prevent double spending. 
 
-When a vendor or any one withdraws the bitcoin , they withdraw from these vaults based on the account balance they have in BMPN tokens.On withdrawal of Bitcoin fund the BMPN token balance is adjusted accordingly.
+When a vendor or any one withdraws the bitcoin , they withdraw from these vaults based on the account balance they have in BMPN tokens. This withdrawal is processed by Network nodes as only these nodes knows the private key, On withdrawal of Bitcoin fund the BMPN token balance is adjusted accordingly.
 
 Also No one can steal the bitcoin deposits present in vaults as the bitcoin vault address private key is secured by intel sgx based procesor which has its own private key which no one knows, not even owner of nodes nor intel company , This is private to processor. Also the transaction of BMPN token on BMPN network happens very fast as confirmation time is 1 second only.
 
