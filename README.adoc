@@ -36,10 +36,13 @@ When a vendor or any one withdraws the bitcoin , they withdraw from these vaults
 
 Also No one can steal the bitcoin deposits present in vaults as the bitcoin vault address private key is secured by intel sgx based procesor which has its own private key which no one knows, not even owner of nodes nor intel company , This is private to processor. Also the transaction of BMPN token on BMPN network happens very fast as confirmation time is 1 second only.
 
-In BMPN Network we have three types of coins/token 
-1) BMPN coin for staking on nodes and protect network 
-2) Bitcoin token similar to ERC 20 token which is equivalent to 1 Bitcoin and backed by Bitcoin. 
-3) Actual Bitcoin stored in vaults.
+== In BMPN Network we have three types of coins/token
+
+BMPN coin for staking on nodes and protect network.
+
+Bitcoin token similar to ERC 20 token which is equivalent to 1 Bitcoin and backed by Bitcoin. 
+
+Actual Bitcoin stored in vaults.
 
 == Technical details  
                                                                    
