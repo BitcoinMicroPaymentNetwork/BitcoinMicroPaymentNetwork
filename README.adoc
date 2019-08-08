@@ -3,7 +3,40 @@ Note - The above source code is fork of Substrate . Right now not a single line 
 == Bitcoin Micro Payment Network (BMPN)
 
 == Introduction 
-We have waited enough for lightening network to solve problem of Bitcoin micropayment. Now its the time for BMPN, give it a try and you will like the idea behind it. This uses layer two blockchain which runs on top intel secure memory technology to keep bitcoin in secure vaults in decentralized nodes and process them in a batch to reduce the cost of transaction.  
+We have waited long for lightening network to solve problem of Bitcoin micropayment. Now its the time for BMPN, give it a try and you will like the idea behind it. Decentralization is at the core of BMPN network technology. 
+
+Let us take an example , There are three people involved in payment network (Alice , BOB and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob . The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
+Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like BitPay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin. 
+
+She also do not want to migrate to other crypto currency for faster payment with lower fee as holding bitcoin has better return in USD than other crypto . She want to invest and spend wisely and so she want to be in Bitcoin. 
+
+She decided to try BMPN network , she deposited 1 bitcoin to BMPN wallet. She had to pay the network fee of bitcoin at very first time. But she wanted to know is it worth ? . She paid 0.5$ worth of bitcoin as network fee to Bitcoin network to transfer 10000$ worth of bitcoin on BMPN network (considering 1 bitcoin = 10000 $). 
+
+Now She does the transfer again  5$ worth of Bitcoin on BMPN network to BoB and she found that network charge is as low as 1 cent per transaction. 
+
+She later did lot of shopping with many vendors and she was surprise that all those transaction were charged with one cent only and transaction was instant (within second).
+
+She also came to know that network is completely decentralized and only she truly owns her bitcoin and this is totally secure and awesome. 
+
+Now Bob has sold many coffee and his bicoin account grown to 2 bicoin in a month . The sale of his shop has done good this month. He wanted to buy new inventory for next month. He made payment to Stacy of 2 bitcoin and was happy that only 1 cent was charged for this transaction and it was confirmed instantly. He was happy to receive money in Bitcoin from customers whose value grown in a month and also the fee he spent for inventory purchase was ultra low. 
+
+Stacy is a big supplier of inventory and some times she needs to deal in cash . So she make a withdrawl of 10 bitcoin which she received from customers from BMPN network to his personal bitcoin address on exchange where she can sale bitcoin and get USD as cash to buy some big lot of supply material.She paid .5 $ worth of bitcoin as network fee to withdraw 10 bitcoin from BMPN network . She also has made some payment on BMPN network to other suppliers but only paid 1 cents during that time, only she is paying one time high fee when she need to cash it out or withdraw bitcoin. 
+She was absolutely fine with this as most of her transaction is in BMPN tokens and only paying 1 cent per transaction. 
+
+The entire payment experience is ultra fast with low fee. And there is peace of mind as only she truly owns her bitcoin and value of bitcoin she holds also grows over time in USD as Bitcoin is always a safe investment. 
+ 
+
+== How it works
+BMPN network works by giving the depositor a token of bitcoin (BMPN token) which is equivalent to the value deposited. 1 BMPN token is equal to 1 bitcoin. This token is backed by the deposit of bitcoin by user. This bitcoins are deposited in vaults across nodes of BMPN network. And all the users transacts in BMPN token and accordingly their BMPN account balance is maintained. User pay very little fee as low as 1 cent per transaction when they send and receive BMPN token to each other. 
+
+When these BMPN token moves from one address to other , there is no movement in actual bitcoin present in vaults so network fee is saved. 
+Bitcoin is kept in vault to prevent double spending. 
+
+When a vendor or any one withdraws the money , they withdraw from these vaults as all of the users bitocoin is deposited in vaults. 
+
+Also No one can steal the bitcoin in vaults as the bitcoin vault address private key is secured by intel sgx based procesor which has its own private key which no one knows, not even owner of nodes nor intel company , This is private to processor. Also the transaction of BMPN token on BMPN network happens very fast as confirmation time is 1 second only.
+
+== Technical details  
                                                                    
 BMPN is decentralized, stateless and layer 2 blockchain network for micro payment of Bitcoin with instant confirmation time and having a low transaction fee.
 
