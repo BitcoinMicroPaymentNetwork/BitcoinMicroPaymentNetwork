@@ -200,7 +200,7 @@ This problem is explained here https://www.youtube.com/watch?v=AzaEd2RQuRw
 
 == Reward for Developers
 
-We do not own anything, and We have provided initial idea and did deep feasibility analysis and we are giving it to the community to implement and it will be owned by the community. We will be involved in implementation , raising fund, project management and custodial service if elected for by the community. 
+We do not own anything, and We have provided initial idea and did deep feasibility analysis and we are giving it to the community to implement and it will be owned by the community. We will be involved in implementation , raising seed fund, project management and custodial service if elected for by the community. 
 
 A BMPN token will be created on Ethereum blockchain with a total amount of 1 billion in the genesis block, later this will be swapped for network coin. This will be distributed to the contributors of the project including us to be decided by community voting. A developer community will be created and custodian of the tokens will be elected by voting. 50 % token will be distributed among open source developers during the lifetime of the project by Custodian. Rest 50% will be deposited to the DAO fund and to be distributed to contributors through a voting mechanism for other purposes like maintenance and marketing. Staking subsidies in BMPN will be available for only 5 years, in the future its the transaction fee in Bitcoin which will be earned by stakers / miners. All the terms and conditions related to reward (50 %) and deposits to DAO can change subject to voting and consensus by the community.    
  
