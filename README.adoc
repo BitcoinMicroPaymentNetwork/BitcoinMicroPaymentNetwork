@@ -3,7 +3,7 @@ Note - The above source code is fork of Substrate . Right now not a single line 
 == Bitcoin Micro Payment Network (BMPN)
 
 == Introduction 
-We have waited long for lightening network to solve problem of Bitcoin micropayment. Now its the time for BMPN, give it a try and you will like the idea behind it. Decentralization is at the core of BMPN network technology. 
+BMPN is a better solution than lightening network to solve problem of Bitcoin micropayment.Decentralization is at the core of BMPN network technology. Give it a try and this will not disappoint you.
 
 Let us take an example , There are three people involved in payment network (Alice , Bob and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob . The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
 Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like BitPay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin. 
