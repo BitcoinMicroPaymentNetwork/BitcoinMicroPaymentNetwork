@@ -1,4 +1,4 @@
-Note - The above source code is fork of Substrate . BMPN network is being implmented on top of it. Developer community will write the run time on substrate to implement BMPN. Refer the substrate readme file on how to build this project at https://github.com/paritytech/substrate/blob/master/README.adoc
+Note - The above source code is fork of Substrate . BMPN network is being implemented on top of it. Developer community will write the run time on substrate to implement BMPN. Refer the substrate readme file on how to build this project at https://github.com/paritytech/substrate/blob/master/README.adoc
 
 == Bitcoin Micro Payment Network (BMPN)
 
