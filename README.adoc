@@ -4,7 +4,9 @@ Note - The above source code is fork of Substrate. BMPN network is being impleme
 
 == Introduction 
 BMPN is in fact a better solution than lightening network to solve problem of Bitcoin micropayment. It performs micropayment by using decentralized vaults to store bitcoin as backup for equivalent token for payment. This vault prevents double spending as they are super secure using Intel SGX technology and Game theory. No one owns the vault, not even the owner of Node in which this vault runs. It’s the run time code and processor private key who owns it. The key of processor is completely private to its hardware, not even intel company who manufactures it knows it. Give it a try to understand this concept and this will not disappoint you.
+
 “BMPN instead transfers the control of the fund to the Machine and Code, making it a transparent entity to secure money against double spending and hacking while the payment happens “
+
 Let us understand its use case by an example, There are three people involved in payment network (Alice, Bob and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob. The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
 Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like Bitpay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin. 
 She also do not want to migrate to other crypto currency for faster payment with lower fee as holding bitcoin has better return in USD than other crypto. She wants to invest and spend wisely and so she want to be in Bitcoin. 
