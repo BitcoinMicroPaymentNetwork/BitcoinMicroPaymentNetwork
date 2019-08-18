@@ -7,10 +7,15 @@ BMPN is in fact a better solution than lightening network to solve problem of Bi
 
 “BMPN instead transfers the control of the fund to the Machine and Code, making it a transparent entity to secure money against double spending and hacking while the payment happens “
 
-Let us understand its use case by an example, There are three people involved in payment network (Alice, Bob and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob. The .5 $ will be spent as Bitcoin network fee and confirmation of payment took 10 minutes. 
-Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like Bitpay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin. 
-She also do not want to migrate to other crypto currency for faster payment with lower fee as holding bitcoin has better return in USD than other crypto. She wants to invest and spend wisely and so she want to be in Bitcoin. 
-She decided to try BMPN network, she deposited 1 bitcoin to BMPN wallet. She had to pay the network fee of bitcoin at very first time. But she wanted to know is it worth? She paid 0.5$ worth of bitcoin as network fee to Bitcoin network to transfer 10000$ worth of bitcoin on BMPN network (considering 1 bitcoin = 10000 $). 
+Let us understand its use case by an example.
+There are three people involved in payment network (Alice, Bob and Stacy) . Alice wants to pay to Bob 5$ worth of bitcoin for a coffee, as the network fee is high Alice might need to transfer 5.5 $ worth of bitcoin to Bob. The .5 $ will be spent as Bitcoin network fee and confirmation of payment wil also take 10 minutes. 
+Alice is not happy with such a huge fee and long wait on confirmation time, so she tried other network like Bitpay , it was a comparatively good experience that transaction was pretty fast but still she could not save her high tx fee of .5 $. She was also worried that she does not have control on her own bitcoin as her bitcoin is deposite to bitpay (a central Organization).
+
+She also do not want to migrate to other crypto currency for faster payment with lower fee as she thinks holding bitcoin has better return in USD than other crypto in long term. She wants to invest and spend wisely and so she want to be in Bitcoin. 
+
+She went on trying lightening network and the experience was not good as most of the time the payment didn't went through because of unavaibility of liquidity and also she discovered that as the network works on liquidity providers to flow payments it has become centralized.
+
+She decided to try BMPN network which promises 0 payment failures experience and totally decentralized network, she deposited 1 bitcoin to BMPN wallet. She had to pay the network fee of bitcoin at very first time. But she wanted to know is it worth? She paid 0.5$ worth of bitcoin as network fee to Bitcoin network to transfer 10000$ worth of bitcoin on BMPN network (considering 1 bitcoin = 10000 $). 
 Now She does the transfer again 5$ worth of Bitcoin on BMPN network to Bob and she found that network charge is as low as 1 cent per transaction. 
 She later did lot of shopping with many vendors and she was surprise that all those transactions were charged with one cent only and transaction was instant (within second).
 She also came to know that network is completely decentralized and only she truly owns her bitcoin, and this is totally secure and awesome. 
@@ -94,11 +99,17 @@ DAO will add an equivalent number of bitcoins to the network if it sees that dep
 User can withdraw bitcoin anytime any amount they like from BMPN Network. It’s not necessary that they have to withdraw the full amount. Accordingly, the bitcoin token balance on the BMPN network will be reduced.  
 
 User wallet function provides 
+
 1) User identifier (mobile number) which will be used as address for making payment.
+
 2) BMPN Bitcoin token address which holds credited bitcoin token (1 bitcoin token on BMPN = 1 Bitcoin)
+
 3) Bitcoin withdrawal address (user can provide address or ask wallet to create it) for bitcoin withdrawal
+
 4) Bitcoin deposit address (This will be provided by wallet during deposit time, this will be provided by Network upon request by wallet)
+
 5) BMPN coin address to store and transact BMPN coins. BMPN coin is only used for staking and earn reward as BMPN coin and bitcoin token (which can later be cashed out for actual bitcoin.)
+
 
 User of network will pay a gas fee in respective token or coin to miners. For bitcoin token they will pay gas fee in bitcoin token, similarly for BMPN transaction they will pay in BMPN token. 
 
