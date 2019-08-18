@@ -22,6 +22,7 @@ She was fine with this as most of her transaction is in BMPN tokens and only pay
 
 The entire payment experience is ultra-fast with low fee. And there is peace of mind as only she truly owns her bitcoin and value of bitcoin she holds also grows over time in USD as Bitcoin is always a safe investment. 
 BMPN because of its traits eventually being adopted among many vendors and more it grows it becomes easy to ecommerce using BMPN payment network. 
+
 == How it works
 BMPN network works by giving the depositor a token of bitcoin (BMPN token) which is equivalent to the value deposited. 1 BMPN token is equal to 1 bitcoin. This token is backed by the deposit of bitcoin by user. These bitcoins are deposited in vaults across nodes of BMPN network. No one has control on these Vaults except BMPN blockchain run time code which runs on secure memory on each node. And all the users of the network transact in BMPN token and accordingly their BMPN account balance is maintained. User pay very little fee as low as 1 cent per transaction when they send and receive BMPN token to each other. 
 When these BMPN token moves from one address to other, there is no movement in actual bitcoin present in vaults, so network fee is saved. 
