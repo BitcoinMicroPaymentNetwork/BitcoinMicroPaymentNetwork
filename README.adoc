@@ -44,9 +44,11 @@ Fast payment of bitcoin token happens because confirmation time is 1 second only
 
 == In BMPN Network we have three types of coins/token
 
-BMPN coin for staking on nodes and protect network.
+1)BMPN coin for staking on nodes and protect network.
 
-Bitcoin token similar to ERC 20 token which is equivalent to 1 Bitcoin and backed by same amount of Bitcoin present in Vaults. 
+2)Bitcoin token similar to ERC 20 token which is equivalent to 1 Bitcoin and backed by same amount of Bitcoin present in Vaults. 
+
+3)Actual Bitcoin. 
 
 == Technical details  for Blockchain Developers
                                                                    
