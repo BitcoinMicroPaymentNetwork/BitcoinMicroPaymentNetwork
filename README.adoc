@@ -3,7 +3,7 @@ Note - The above source code is fork of Substrate. BMPN network is being impleme
 == Bitcoin Micro Payment Network (BMPN)
 
 == Introduction 
-BMPN is in fact a better solution than lightening network to solve problem of Bitcoin micropayment. It performs micropayment by using decentralized vaults to store bitcoin as backup for equivalent token for payment. This vault prevents double spending as they are super secure using Intel SGX technology and Game theory. No one owns the vault, not even the owner of Node in which this vault runs. It’s the run time code and processor private key who owns it. The key of processor is completely private to its hardware, not even intel company who manufactures it knows it. Give it a try to understand this concept and this will not disappoint you.
+BMPN is in fact a better solution than lightning network to solve problem of Bitcoin micropayment. It performs micropayment by using decentralized vaults to store bitcoin as backup for equivalent token for payment. This vault prevents double spending as they are super secure using Intel SGX technology and Game theory. No one owns the vault, not even the owner of Node in which this vault runs. It’s the run time code and processor private key who owns it. The key of processor is completely private to its hardware, not even intel company who manufactures it knows it. Give it a try to understand this concept and this will not disappoint you.
 
 “BMPN instead transfers the control of the fund to the Machine and Code, making it a transparent entity to secure money against double spending and hacking while the payment happens “
 
@@ -13,7 +13,7 @@ Alice is not happy with such a huge fee and long wait on confirmation time, so s
 
 She also do not want to migrate to other crypto currency for faster payment with lower fee as she thinks holding bitcoin has better return in USD than other crypto in long term. She wants to invest and spend wisely and so she want to be in Bitcoin. 
 
-She went on trying lightening network and the experience was not good as most of the time the payment didn't went through because of unavaibility of liquidity and also she discovered that as the network works on liquidity providers to flow payments it has become centralized.
+She went on trying lightning network and the experience was not good as most of the time the payment didn't went through because of unavailability of liquidity and also she discovered that as the network works on liquidity providers to flow payments it has become centralized.
 
 She decided to try BMPN network which promises 0 payment failures experience and totally decentralized network, she deposited 1 bitcoin to BMPN wallet. She had to pay the network fee of bitcoin at very first time. But she wanted to know is it worth? She paid 0.5$ worth of bitcoin as network fee to Bitcoin network to transfer 10000$ worth of bitcoin on BMPN network (considering 1 bitcoin = 10000 $). 
 Now She does the transfer again 5$ worth of Bitcoin on BMPN network to Bob and she found that network charge is as low as 1 cent per transaction. 
